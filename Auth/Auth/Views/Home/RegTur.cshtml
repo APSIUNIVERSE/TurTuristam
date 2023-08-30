@@ -1,0 +1,74 @@
+﻿@model Auth.Models.RegTurViewModel
+
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+	<title>WebApp</title>
+	<link rel="stylesheet" href="~/css/StyleSheet.css">
+</head>
+<body style="background-color: white">
+
+	<div class="wrapper">
+
+		<div class="app" style="border: 2px; border-color: #539AF6">
+			<div>
+				<img src="~/img/Arrow 19.svg" class="absolute__back" style="left: 21px">
+				<a class="absolute__back" href="/Home/Reg/">
+					Назад
+				</a>
+			</div>
+			<div class="app__img__tur" style="width: 100%; text-align: center;">
+				<img src="~/img/img2.png" style="width: 100px; ">
+			</div>
+			<div class="turik" style="font-size: 30px">
+				TurTuristam
+			</div>
+			<form method="post" asp-action="SaveData" asp-controller="Home">
+				<div class="form__body">
+					<a style="color: #fff;
+								display: inline-block;
+								text-decoration: none;
+								font-size: 40px;
+								width: 100%;
+								background-color: #539AF6;
+								text-align: center;
+								padding: 5px 0;
+								">Регистрация</a>
+					<div class="form__body__fields">
+					
+						<div style="width: 100%">
+							<input type="text" name="name" asp-for="Name" placeholder="Имя" style=" width: 100%; height: 40px; border-right: 0; border-left: 0; border-top: 0; border-color: #539AF6; outline: none; font-size: 20px" />
+						</div>
+						<div style="width: 100%">
+							<input type="text" name="phone" asp-for="Phone" placeholder="Телефон" style="border-right: 0; border-left: 0; border-top: 0; width: 100%; height: 40px; border-color: #539AF6; outline: none; font-size: 20px" />
+						</div>
+						<div style="width: 100%">
+							<input type="email" name="mail" asp-for="Mail" placeholder="Почта" style="border-right: 0; border-left: 0; border-top: 0; width: 100%; height: 40px; border-color: #539AF6; outline: none; font-size: 20px" />
+						</div>
+						<div style="width: 100%">
+							<input type="checkbox" style="margin-top: 25px; width: 16px; height: 16px"/>
+							<label for="konf" style="font-size: 12px; color: #2793F2">Согласен на обработку персональных данных</label>
+						</div>
+						<div style="width: 100%; text-align:center; margin-top: 20px;">
+							<a style="font-size: 12px; color: #2793F2; text-decoration: underline;" href="/Home/Policy">
+								Политика конфиденциальности
+							</a>
+						</div>
+					
+					</div>
+				</div>
+				<div style="width: 100%">
+					<button class="registerbutton" type="submit">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+				</div>
+			</form>
+		</div>
+		
+	</div>
+
+</body>
+</html>

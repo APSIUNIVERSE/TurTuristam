@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+	<title>WebApp</title>
+	<link rel="stylesheet" href="~/css/StyleSheet.css">
+	
+</head>
+<body style="background-color: white">
+
+	<div class="wrapper">
+
+		<div class="app">
+			<div style="width: 100%; display: flex; height: 40px; position: absolute; border-bottom: 2px solid #03178C; top: 0; justify-content: center">
+				<img src="~/img/bell.svg" style="position: absolute; left: 15px; bottom: 10px" alt="Bell">
+				<span style="margin-top: 10px; color: #034AA6; font-size: 20px; font-weight: 600; line-height: 18px;">TurTuristam</span>
+				<img src="~/img/Ellipse.svg" style="position: absolute; right: 15px; bottom: 8px" alt="Bell">
+			</div>
+			
+			
+			<div style="width: 100%; display: flex; height: 40px; position: absolute; border-top: 2px solid #03178C; bottom: 0; justify-content: center; flex-direction: row">
+				<div onclick="redirectToPage5()" style="width: 20%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center">
+					<img src="~/img/Home.svg" width="21" height="21" alt="Home">
+					<span style="color: #034AA6; font-size: 10px;">Домой</span>
+				</div>
+				
+				<div onclick="redirectToPage5()" style="width: 20%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center">
+					<img src="~/img/Search.svg" width="21" height="21" alt="Home">
+					<span style="color: #034AA6; font-size: 10px;">Поиск</span>
+				</div>
+
+				<div onclick="redirectToPage5()" style="width: 20%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center">
+					<img src="~/img/Favorite.svg" width="21" height="21" alt="Home">
+					<span style="color: #034AA6; font-size: 10px;">Избранное</span>
+				</div>
+
+				<div onclick="redirectToPage()" style="width: 20%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center">
+					<img src="~/img/Chati.svg" width="21" height="21" alt="Home">
+					<span style="color: #034AA6; font-size: 10px;">Чаты</span>
+				</div>
+            				
+				<div onclick="redirectToPage3()" style="width: 20%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center">
+					<img src="~/img/Lichniy.svg" width="21" height="21" alt="Home">
+					<span style="color: #034AA6; font-size: 9px;">Кабинет</span>
+				</div>
+				
+			</div>
+			
+		</div>
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+	<title>WebApp</title>
+	<link rel="stylesheet" href="~/css/StyleSheet.css">
+</head>
+<body style="background-color: white">
+
+	<div class="wrapper">
+
+		<div class="app" style="align-items: center; overflow-y: auto;">
+			<div style="width: 100%; display: flex; height: 40px; position: absolute; border-bottom: 2px solid #03178C; top: 0; justify-content: center">
+				<img src="~/img/bell.svg" style="position: absolute; left: 15px; bottom: 10px" alt="Bell">
+				<span style="margin-top: 10px; color: #034AA6; font-size: 20px; font-weight: 600; line-height: 18px;">TurTuristam</span>
+				<img src="~/img/Ellipse.svg" style="position: absolute; right: 15px; bottom: 8px" alt="Bell">
+			</div>
+			
+			<div style="display: flex; flex-direction: column; height: 85%; overflow-y: auto; overflow-x: hidden">
+				<span style="color: #034AA6;font-size: 50px; width: 100%; margin-left: 15px">Игорь</span>
+                			<span style="color: #034AA6;font-size: 20px; margin-left: 15px">Здравствуйте, куда вы хотите отправиться?</span>
+                			<span style="color: #2793F2;font-size: 20px; margin-top: 20px; width: 90%; margin-left: 15px">Страна</span>
+                			<input type="text" name="Country" placeholder="Китай" id="country" style="padding: 5px 0; width: 100%; height: 40px; border-radius: 5px; border-color: #539AF6; margin-top: 10px; outline: none; padding-left: 10px; font-size: 20px"/>
+                			<span style="color: #2793F2;font-size: 20px; margin-top: 20px; width: 90%; margin-left: 15px">Город</span>
+                			<input type="text" name="City" placeholder="Пекин" id="city" style="padding: 5px 0; width: 100%; height: 40px; border-radius: 5px; border-color: #539AF6; margin-top: 10px; outline: none; padding-left: 10px; font-size: 20px"/>
+                			<span style="color: #2793F2;font-size: 20px; margin-top: 20px; width: 90%; margin-left: 15px">Нужен ли?</span>
+                			<div style="display: flex; width: 90%; justify-content: space-between">
+                				<label class="checkbox-container">
+                					<span class="text">Трансфер</span>
+                					<input name="Transfer" type="checkbox">
+                					<span class="checkmark"></span>
+                				</label>
+                				
+                				<label class="checkbox-container">
+                					<span class="text">Питание</span>
+                					<input name="Transfer" type="checkbox">
+                					<span class="checkmark"></span>
+                				</label>
+                				
+                				<label class="checkbox-container">
+                					<span class="text">Экскурсии</span>
+                					<input name="Transfer" type="checkbox">
+                					<span class="checkmark"></span>
+                				</label>
+                				
+                			</div>
+                			<span style="color: #2793F2;font-size: 20px; margin-top: 20px; width: 90%; margin-left: 15px">Номер</span>
+                			<select name="AgNumberType" id="numbertype" style="margin-top: 10px; width: 100%; height: 40px; border-radius: 5px; border-color: #539AF6; font-size: 20px">
+                				<option style="color: #757578">Не выбрано</option>
+                				<option style="color: #034AA6">Стандартный номер</option>
+                				<option style="color: #034AA6">Номер люкс</option>
+                			</select>
+                			<span style="color: #2793F2;font-size: 20px; margin-top: 20px; width: 90%; margin-left: 15px">Количество персон</span>
+                			<select name="AgPersonCount" id="mySelect" style="margin-top: 10px; width: 100%; height: 40px; border-radius: 5px; border-color: #539AF6; font-size: 20px">
+                				<option style="color: #757578">Не выбрано</option>
+                				<option style="color: #034AA6">1 человек</option>
+                				<option style="color: #034AA6">2 человека</option>
+                				<option style="color: #034AA6">3 человека</option>
+                				<option value="other" style="color: #757578">Свой вариант</option>
+                			</select>
+                			<div id="inputContainer" style="display: none; width: 100%">
+                				<input type="text" id="textInput" placeholder="Количество персон" style="padding: 5px 0; width: 100%; height: 40px; border-radius: 5px; border-color: #539AF6; margin-top: 10px; outline: none; padding-left: 10px; font-size: 20px"/>
+                			</div>
+                			<span style="color: #2793F2;font-size: 20px; margin-top: 20px; width: 90%; margin-left: 15px">Бюджет</span>
+			                <input type="text" name="AgPrice" id="price" style="padding: 5px 0; width: 100%; height: 40px; border-radius: 5px; border-color: #539AF6; margin-top: 10px; outline: none; padding-left: 10px; font-size: 20px"/>
+			                <div style="align-items: center; justify-content: center; width: 100%; display: flex; margin-top: 20px">
+				                <button style="height: 40px; width: 145px; font-size: 15px; border-radius: 5px; border: 2px solid #034AA6; background: #03178C; color: #F2F2F2;">
+					                Отправить тур
+				                </button>
+			                </div>
+			                
+			</div>
+			
+			
+
+
+			<div style="width: 100%; display: flex; height: 40px; position: absolute; border-top: 2px solid #03178C; bottom: 0; justify-content: center; flex-direction: row">
+				<div onclick="redirectToPage()" style="width: 20%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center">
+					<img src="~/img/Home.svg" width="21" height="21" alt="Home">
+					<span style="color: #034AA6; font-size: 10px;">Домой</span>
+				</div>
+            				
+				<div onclick="redirectToPage2()" style="width: 20%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center">
+					<img src="~/img/Search.svg" width="21" height="21" alt="Home">
+					<span style="color: #034AA6; font-size: 10px;">Поиск</span>
+				</div>
+            
+				<div onclick="redirectToPage3()" style="width: 20%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center">
+					<img src="~/img/Favorite.svg" width="21" height="21" alt="Home">
+					<span style="color: #034AA6; font-size: 10px;">Избранное</span>
+				</div>
+            
+				<div onclick="redirectToPage4()" style="width: 20%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center">
+					<img src="~/img/Chati.svg" width="21" height="21" alt="Home">
+					<span style="color: #034AA6; font-size: 10px;">Чаты</span>
+				</div>
+                        				
+				<div onclick="redirectToPage5()" style="width: 20%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center">
+					<img src="~/img/Lichniy.svg" width="21" height="21" alt="Home">
+					<span style="color: #034AA6; font-size: 10px;">Личный кабинет</span>
+				</div>
+            				
+			</div>
+			
+		</div>
+
+	</div>
+<script>
+  function redirectToPage() {
+    window.location.href = '/Home/IndexTurist'; // Замените '/OtherPage' на URL-адрес нужной вам страницы
+  }
+  function redirectToPage2() {
+      window.location.href = '/Home/SearchTur'; // Замените '/OtherPage' на URL-адрес нужной вам страницы
+    }
+  function redirectToPage3() {
+	  window.location.href = '/Home/Favourites'; // Замените '/OtherPage' на URL-адрес нужной вам страницы
+	}
+  function redirectToPage4() {
+  	  window.location.href = '/Home/ChatingTur'; // Замените '/OtherPage' на URL-адрес нужной вам страницы
+  	}
+  function redirectToPage5() {
+  	  window.location.href = '/Home/IndexAgent'; // Замените '/OtherPage' на URL-адрес нужной вам страницы
+  	}
+</script>
+</body>
+</html>
